@@ -1,0 +1,46 @@
+{
+  "name": "bof",
+  "version": "1.0.0",
+  "description": "Neatly organize your workspace",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist/",
+    "test": "mocha --require ts-node/register ./test/**/*.ts",
+    "rebuild": "npm run clean && npm run build",
+    "prepublish": "npm run rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfe84/bof.git"
+  },
+  "keywords": [
+    "workspace",
+    "organize",
+    "org"
+  ],
+  "author": "cfe84",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cfe84/bof/issues"
+  },
+  "homepage": "https://github.com/cfe84/bof#readme",
+  "devDependencies": {
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.5",
+    "@types/should": "^13.0.0",
+    "mocha": "^7.2.0",
+    "should": "^13.2.3",
+    "testdouble": "^3.15.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3",
+    "yaclip": "^1.2.1"
+  },
+  "bin": {
+    "bof": "./bin/bof"
+  },
+  "dependencies": {
+    "command-line-usage": "^6.1.0"
+  },
+  "typings": "./typings/types/yaclip.d.ts"
+}
